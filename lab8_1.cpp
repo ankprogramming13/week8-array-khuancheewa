@@ -2,11 +2,31 @@
 
 using namespace std;
 
-int main () {
 
-        int arr[10] = {3,2,5,5,6,9,1,3,2,7};
+double circleArea (double r ) {
+    double result;
+    result = 3.1416 * r * r;
+    return result;
+}
 
-        // เขียนโปรแกรมเพื่อแสดงค่าใน arr
+int main() {
+    /* เขียนโปรแกรมรับค่ารัศมีวงกลมจากคีย์บอร์ด และหาพื้นที่ของวงกลมเป็นทศนิยม 4 ตำแหน่ง
+    โดยกำหนดให้โปรแกรมหาพื้นที่ของวงกลม จนกว่าผู้ใช้งานต้องการออกจากการทำงานของโปรแกรม
+    และกำหนดให้แบ่งการทำงานเป็นโปรแกรมย่อยอย่างน้อย 1 ฟังก์ชัน
+    */
+    double r;
+    cin >> r;
 
-        return 0;
+
+    int cmd;
+
+    do {
+        cout << "Enter r : ";
+        cin >> r;
+        cout << "Area : " << circleArea(r) << endl;
+        cout << "Enter cmd :";
+        cin >> cmd;
+
+    }while (cmd != 2);
+    return 0;
 }
